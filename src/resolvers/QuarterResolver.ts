@@ -16,7 +16,7 @@ export class QuarterResolver {
         } else {
             qtr.count = data.meta.count
             qtr.total = data.meta.total
-            if(!month) {
+            if(month === null) {
                 qtr.income = data.data
             } else {
                 qtr.income = data.data.filter((element: any) => 

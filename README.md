@@ -27,9 +27,7 @@ $ sudo npm install
 
 | Method        | Arguments | Description |
 | ------------- | --------- | ----------- |
-| getByMonth    | month     | Required: false|
-|               |           | Type: int|
-|               |           | Description: Receives the number of the month from 0  to 11|
+| getByMonth    | month     | Required: false   Type: int   Description: Receives the number of the month from 0  to 11|
 
 ## Run the Application
 
