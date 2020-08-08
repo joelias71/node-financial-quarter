@@ -17,13 +17,23 @@ Revenue API using Typescript and GraphQL
 
 ## Install and Build
 
-You nees to clone the repo and install the dependencies before start:
+You need to clone the repo and install the dependencies before start:
 
 ```sh
 $ cd node-financial-quarter
 $ sudo npm install
 ```
+## API documentation
+
+| Method        | Arguments | Description |
+| ------------- | --------- | ----------- |
+| getByMonth    | month     | Required: false|
+|               |           | Type: int|
+|               |           | Description: Receives the number of the month from 0  to 11|
+
 ## Run the Application
+
+By default the application is going to run on port **8888**.  
 
 Development
 
