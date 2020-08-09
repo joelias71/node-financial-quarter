@@ -4,11 +4,8 @@ import { ObjectType, Field } from "type-graphql";
 export class Income {
 
     @Field({ nullable: true })
-    id: number;
+    interval: String;
 
     @Field({ nullable: true })
-    total: number;
-
-    @Field({ nullable: true })
-    date: String;
+    revenue: number;
 }

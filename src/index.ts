@@ -1,11 +1,13 @@
 import 'reflect-metadata'
 import express from 'express'
+import cors from 'cors'
 import { ApolloServer } from 'apollo-server-express'
 import { buildSchema } from 'type-graphql'
 import { QuarterResolver } from './resolvers/QuarterResolver'
 
 (async () => {
     const app = express();
+    app.use(cors());
 
     const apolloServer = new ApolloServer({
         schema: await buildSchema({
