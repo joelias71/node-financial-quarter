@@ -27,7 +27,7 @@ $ sudo npm install
 
 | Method        | Arguments | Description |
 | ------------- | --------- | ----------- |
-| getByMonth    | month     | Required: false<br>Type: int<br>Description: Receives the number of the month from 0  to 11|
+| getByMonth    | no params | This method returns the total revenue by month|
 
 ## Run the Application
 
