@@ -10,8 +10,8 @@ export function loadData() {
 }
 
 function getMonthlyIncome(month :number, data :[]) {
-    const textMonths = ['january','february','march','april','may','june','july','august'
-    ,'september','october','november, december']
+    const textMonths = ['January','February','March','April','May','June','July','August'
+    ,'September','October','November, December']
 
     const dataByMonth = data.filter((element :any) => new Date(element.date.toString()).getMonth() === month)
     const totalByMonth = dataByMonth.reduce((a :any, b :any) => a + b.total, 0)
@@ -24,4 +24,9 @@ export function getIncome(data :[]) {
     const months = [...new Set(allMonths)]
     months.sort()
     return months.map(m => getMonthlyIncome(m,data))
+}
+
+export function getTotal(data :[]) {
+    const amounts = data.map((month:any) => month.total)
+    return amounts.reduce((a :any, b :any) => a + b, 0)
 }

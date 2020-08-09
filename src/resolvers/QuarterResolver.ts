@@ -1,6 +1,6 @@
 import { Query, Resolver } from 'type-graphql'
 import { Quarter } from '../entity/Quarter'
-import { loadData, getIncome } from '../data/data'
+import { loadData, getIncome, getTotal } from '../data/data'
 
 @Resolver()
 export class QuarterResolver {
@@ -13,10 +13,11 @@ export class QuarterResolver {
 
         if(data.length === 0){
             qtr.income = []
+            qtr.total = 0
         } else {
-            qtr.count = data.meta.count
-            qtr.total = data.meta.total
             qtr.income = getIncome(data.data)
+            qtr.count = data.meta.count
+            qtr.total = getTotal(data.data)
         }
 
         return qtr
